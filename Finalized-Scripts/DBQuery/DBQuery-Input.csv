@@ -1,0 +1,2 @@
+RunsOn	DB Type	DB Connection String	Sample Query	Expected Output
+10.1.0.6	MSSQL	Server=10.1.0.6;Database=AdventureWorks2022;User Id=azadmin;Password=azadmin@123456	SELECT COUNT(*) FROM HumanResources.Employee	290

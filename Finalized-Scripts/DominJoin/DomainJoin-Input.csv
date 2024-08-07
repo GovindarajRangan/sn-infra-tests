@@ -1,0 +1,4 @@
+RunsOn,ComputerName,ExpectedResult
+10.1.0.5,10.1.0.5,Not Joined
+10.1.0.6,10.1.0.6,Not Joined
+10.1.0.7,10.1.0.6,Not Joined

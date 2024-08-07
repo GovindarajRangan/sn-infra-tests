@@ -1,0 +1,7 @@
+RunsOn,Tool Name,Config Signature,Config,Signature Type,Expected Config
+192.168.1.10,SCCM,HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS,ConfigValue,Registry,ExpectedValue
+192.168.1.11,Defender,C:\Program Files\Windows Defender\Config.txt,Enabled,FileConfig,Enabled
+192.168.1.12,Rapid7,powershell.exe -Command Get-Service -Name 'Rapid7',ServiceStatus,CommandLine,Running
+192.168.1.13,ExampleTool,HKEY_LOCAL_MACHINE\SOFTWARE\ExampleTool\Settings,SettingValue,Registry,TRUE
+192.168.1.14,Antivirus,C:\Program Files\Antivirus\Config.ini,ScanEnabled,FileConfig,TRUE
+192.168.1.15,ExampleProcess,powershell.exe -Command Get-Process -Name 'ExampleProcess',ProcessStatus,CommandLine,Running

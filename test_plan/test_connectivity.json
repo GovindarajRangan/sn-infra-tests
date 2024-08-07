@@ -1,0 +1,86 @@
+{
+    "connectivity": [
+        {
+            "name": "Out: Oracle Cloud",
+            "runs_on": "localhost",
+            "platform": "linux",
+            "destinations": ["129.147.228.28"],
+            "ports": [1521]
+        },
+        {
+            "name": "Out: Salesforce",
+            "runs_on": "localhost",
+            "platform": "linux",
+            "destinations": [
+                "3.228.190.251",
+                "34.206.116.149",
+                "35.174.143.92",
+                "52.203.77.201",
+                "54.156.107.163",
+                "54.158.77.4",
+                "54.163.166.54",
+                "54.83.60.38",
+                "107.21.202.122"
+            ],
+            "ports": [443]
+        },
+        {
+            "name": "In: SSH",
+            "runs_on": "192.168.0.18",
+            "platform": "linux",
+            "destinations": [
+                "mdc-lcrmstg01"
+            ],
+            "ports": [22]
+        }
+    ],
+    "domain": [
+        {
+            "name": "Domain joined",
+            "runs_on": "localhost",
+            "platform": "linux",
+            "domain_name": "lennar.lennarcorp.com"
+        }
+    ],
+    "services": [
+        {
+            "name": "Wildfly",
+            "runs_on": "localhost",
+            "platform": "linux",
+            "test_command": "./jboss-cli.sh -c command=':read-attribute(name=server-state)' | grep running",
+            "expected_str_in_output": "RUNNING" 
+        },
+        {
+            "name": "Java",
+            "runs_on": "localhost",
+            "platform": "linux",
+            "test_command": "ps -ef | grep java",
+            "expected_str_in_output": "RUNNING" 
+        },
+        {
+            "name": "Postfix",
+            "runs_on": "localhost",
+            "platform": "linux",
+            "test_command": "ps -ef | grep java",
+            "expected_str_in_output": "RUNNING" 
+        }
+    ],
+    "agents": [
+        {
+            "name": "Solarwinds",
+            "runs_on": "localhost",
+            "platform": "linux",
+            "config_type": "api",
+            "api_endpoint": "",
+            "config_signature": ""
+        },
+        {
+            "name": "Rapid 7",
+            "runs_on": "localhost",
+            "platform": "linux",
+            "config_type": "api",
+            "api_endpoint": "",
+            "config_signature": ""
+        }
+    ]
+}

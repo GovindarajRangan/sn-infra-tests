@@ -1,0 +1,8 @@
+RunsOn,DB Type,DB Connection String,Sample Query,Expected Output
+192.168.1.10,MSSQL,Server=192.168.1.10;Database=AdventureWorks2022;User Id=myUsername;Password=myPassword,SELECT COUNT(*) FROM HumanResources.Employee,290
+192.168.1.10,MSSQL,Server=192.168.1.10;Database=AdventureWorks2022;User Id=myUsername;Password=myPassword,SELECT Name FROM HumanResources.Department WHERE DepartmentID=1,Engineering
+192.168.1.10,MSSQL,Server=192.168.1.10;Database=AdventureWorks2022;User Id=myUsername;Password=myPassword,SELECT SUM(Salary) FROM HumanResources.EmployeePayHistory,1000000
+192.168.1.20,MSSQL,Server=192.168.1.20;Database=WideWorldImporters;User Id=myUsername;Password=myPassword,SELECT COUNT(*) FROM Sales.Customers,104
+192.168.1.20,MSSQL,Server=192.168.1.20;Database=WideWorldImporters;User Id=myUsername;Password=myPassword,SELECT CityName FROM Application.Cities WHERE CityID=1,Aberdeen
+192.168.1.20,MSSQL,Server=192.168.1.20;Database=WideWorldImporters;User Id=myUsername;Password=myPassword,SELECT SUM(OrderTotal) FROM Sales.Orders,1500000
+10.1.0.5,MSSQL,Server=autmtion-1\SQLEXPRESS;Database=AdventureWorks2022;User Id=azadmin;Password=azadmin@12345,SELECT COUNT(*) FROM HumanResources.Employee,290

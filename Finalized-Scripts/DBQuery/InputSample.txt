@@ -1,0 +1,37 @@
+Explanation of the CSV Columns:
+RunsOn: The IP address or hostname of the server where the SQL server is running.
+DB Type: The type of the database (e.g., MSSQL).
+DB Connection String: The connection string used to connect to the database.
+Sample Query: The SQL query to be executed.
+Expected Output: The expected result of the query.
+
+
+Explanation of the CSV Entries:
+AdventureWorks2022 Database:
+
+192.168.1.10,MSSQL,Server=192.168.1.10;Database=AdventureWorks2022;User Id=myUsername;Password=myPassword,SELECT COUNT(*) FROM HumanResources.Employee,290
+RunsOn: 192.168.1.10
+DB Type: MSSQL
+DB Connection String: Server=192.168.1.10;Database=AdventureWorks2022;User Id=myUsername;Password=myPassword
+Sample Query: SELECT COUNT(*) FROM HumanResources.Employee
+Expected Output: 290 (number of employees)
+192.168.1.10,MSSQL,Server=192.168.1.10;Database=AdventureWorks2022;User Id=myUsername;Password=myPassword,SELECT Name FROM HumanResources.Department WHERE DepartmentID=1,Engineering
+Sample Query: SELECT Name FROM HumanResources.Department WHERE DepartmentID=1
+Expected Output: Engineering (name of department)
+192.168.1.10,MSSQL,Server=192.168.1.10;Database=AdventureWorks2022;User Id=myUsername;Password=myPassword,SELECT SUM(Salary) FROM HumanResources.EmployeePayHistory,1000000
+Sample Query: SELECT SUM(Salary) FROM HumanResources.EmployeePayHistory
+Expected Output: 1000000 (sum of salaries)
+WideWorldImporters Database:
+
+192.168.1.20,MSSQL,Server=192.168.1.20;Database=WideWorldImporters;User Id=myUsername;Password=myPassword,SELECT COUNT(*) FROM Sales.Customers,104
+RunsOn: 192.168.1.20
+DB Type: MSSQL
+DB Connection String: Server=192.168.1.20;Database=WideWorldImporters;User Id=myUsername;Password=myPassword
+Sample Query: SELECT COUNT(*) FROM Sales.Customers
+Expected Output: 104 (number of customers)
+192.168.1.20,MSSQL,Server=192.168.1.20;Database=WideWorldImporters;User Id=myUsername;Password=myPassword,SELECT CityName FROM Application.Cities WHERE CityID=1,Aberdeen
+Sample Query: SELECT CityName FROM Application.Cities WHERE CityID=1
+Expected Output: Aberdeen (name of city)
+192.168.1.20,MSSQL,Server=192.168.1.20;Database=WideWorldImporters;User Id=myUsername;Password=myPassword,SELECT SUM(OrderTotal) FROM Sales.Orders,1500000
+Sample Query: SELECT SUM(OrderTotal) FROM Sales.Orders
+Expected Output: 1500000 (sum of order totals)
